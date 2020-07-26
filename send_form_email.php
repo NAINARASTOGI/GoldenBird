@@ -3,7 +3,7 @@ if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = "goldenbird.2k20@gmail.com";
-    $email_subject = "Message from www.mohammadsharfuddin.com";
+    $email_subject = "Message from goldenbirdwebsite";
  
     function died($error) {
         // your error code can go here
@@ -16,19 +16,19 @@ if(isset($_POST['email'])) {
  
  
     // validation expected data exists
-    if(!isset($_POST['Name']) ||
-        !isset($_POST['Email']) ||
-        !isset($_POST['Subject']) ||
-        !isset($_POST['Message'])) {
+    if(!isset($_POST['name']) ||
+        !isset($_POST['email']) ||
+        !isset($_POST['subject']) ||
+        !isset($_POST['message'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
  
      
  
-    $name = $_POST['Name']; // required
-    $email_from = $_POST['Email']; // required
-    $subject = $_POST['Subject']; // required
-    $message = $_POST['Message']; // required
+    $name = $_POST['name']; // required
+    $email_from = $_POST['email']; // required
+    $subject = $_POST['subject']; // required
+    $message = $_POST['message']; // required
     
  
     $error_message = "";
@@ -63,10 +63,10 @@ if(isset($_POST['email'])) {
  
      
  
-    $email_message .= "Name: ".clean_string($name)."\n";
-    $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Subject: ".clean_string($subject)."\n";
-    $email_message .= "Message: ".clean_string($message)."\n";
+    $email_message .= "name: ".clean_string($name)."\n";
+    $email_message .= "email: ".clean_string($email_from)."\n";
+    $email_message .= "subject: ".clean_string($subject)."\n";
+    $email_message .= "message: ".clean_string($message)."\n";
  
 // create email headers
 $headers = 'From: '.$email_from."\r\n".
