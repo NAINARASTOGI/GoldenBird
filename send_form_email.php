@@ -16,19 +16,19 @@ if(isset($_POST['email'])) {
  
  
     // validation expected data exists
-    if(!isset($_POST['name']) ||
-        !isset($_POST['email']) ||
-        !isset($_POST['subject']) ||
-        !isset($_POST['message'])) {
+    if(!isset($_POST['Name']) ||
+        !isset($_POST['Email']) ||
+        !isset($_POST['Subject']) ||
+        !isset($_POST['Message'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
  
      
  
-    $name = $_POST['name']; // required
-    $email_from = $_POST['email']; // required
-    $subject = $_POST['subject']; // required
-    $message = $_POST['message']; // required
+    $name = $_POST['Name']; // required
+    $email_from = $_POST['Email']; // required
+    $subject = $_POST['Subject']; // required
+    $message = $_POST['Message']; // required
     
  
     $error_message = "";
